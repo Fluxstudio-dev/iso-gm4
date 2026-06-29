@@ -1,0 +1,2036 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="dynamic-title">تفاصيل المنتج | ISO-GM</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Assets/style.css" />
+    <link rel="icon" href="../Assets/Gallery/logo.png" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      id="og-title"
+      property="og:title"
+      content="ISO-GM | قطع غيار وإكسسوارات سيارات"
+    />
+    <meta
+      id="og-desc"
+      property="og:description"
+      content="تصفح أفضل إكسسوارات السيارات بأعلى جودة وأفضل سعر"
+    />
+    <meta
+      id="og-image"
+      property="og:image"
+      content="https://iso-gmtest.netlify.app/Assets/Gallery/logo.png"
+    />
+    <meta
+      property="og:image"
+      content="https://iso-gmtest.netlify.app/Assets/Gallery/logo.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <style>
+      /* إضافات خاصة بصفحة التفاصيل لتتماشى مع الهوية البصرية */
+      .details-wrapper {
+        padding: 150px 8% 80px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .glass-detail-card {
+        background: #ffffff;
+        border-radius: 25px;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+        padding: 40px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .product-visual-area {
+        background: var(--bg-black);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow: hidden;
+      }
+
+      .product-visual-area img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+      }
+
+      .product-visual-area:hover img {
+        transform: scale(1.08);
+      }
+
+      .info-content h1 {
+        font-size: 2.5rem;
+        color: #111;
+        margin-bottom: 10px;
+      }
+
+      .detail-price {
+        font-size: 2rem;
+        color: var(--primary-cl);
+        font-weight: 800;
+        margin-bottom: 25px;
+      }
+
+      .detail-desc {
+        color: var(--text-muted);
+        line-height: 1.8;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        padding-right: 15px;
+        border-right: 3px solid var(--primary-cl);
+      }
+
+      .specs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .spec-tag {
+        background: var(--bg-darker);
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .spec-tag i {
+        color: var(--primary-cl);
+      }
+
+      .action-area {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-main-buy {
+        flex: 2;
+        text-align: center;
+        background: var(--whatsapp-green);
+        color: white;
+        text-decoration: none;
+        padding: 18px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-main-buy:hover {
+        background: #128c7e;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+      }
+
+      @media (max-width: 992px) {
+        .glass-detail-card {
+          grid-template-columns: 1fr;
+        }
+        .details-wrapper {
+          padding-top: 120px;
+        }
+        .info-content h1 {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../about.html">عن ISO-GM</a></li>
+          <li>
+            <a href="../products.html" style="color: var(--primary-cl)"
+              >منتجاتنا</a
+            >
+          </li>
+          <li><a href="#footer" class="nav-contact-btn">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="logo"
+        ><img src="../Assets/Gallery/logo.png" alt="ISO-GM Logo"
+      /></a>
+    </header>
+
+    <main class="details-wrapper">
+      <div class="glass-detail-card">
+        <div class="product-visual-area">
+          <img
+            id="main-product-img"
+            src=""
+            alt="Product"
+            onerror="
+              this.onerror = null;
+              this.src = '../Assets/Gallery/logo.png';
+            "
+          />
+        </div>
+
+        <div class="info-content">
+          <div class="badge" style="margin-bottom: 10px">إصدار أصلي 2026</div>
+          <h1 id="product-name">جاري التحميل...</h1>
+          <div class="detail-price" id="product-price">-- ج.م</div>
+
+          <p class="detail-desc" id="product-description">
+            جاري جلب تفاصيل المنتج من قاعدة البيانات...
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-tag">
+              <i class="fas fa-shield-alt"></i> ضمان ISO-GM
+            </div>
+            <div class="spec-tag">
+              <i class="fas fa-tools"></i> متاح التركيب
+            </div>
+            <div class="spec-tag">
+              <i class="fas fa-shipping-fast"></i> شحن للقاهرة
+            </div>
+            <div class="spec-tag">
+              <i class="fas fa-check-double"></i> فحص جودة
+            </div>
+          </div>
+
+          <div class="action-area">
+            <a id="whatsapp-link" href="#" class="btn-main-buy">
+              <i class="fab fa-whatsapp"></i> اطلب عبر واتساب
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ========================================== -->
+    <!--               FOOTER SECTION               -->
+    <!-- ========================================== -->
+    <footer class="main-footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <div class="logo" style="margin-bottom: 20px">
+            ISO<span>-GM</span>
+          </div>
+          <p>
+            الرائدون في تجهيز وكماليات السيارات الفاخرة، نقدم حلولاً تجمع بين
+            التكنولوجيا المتقدمة والرفاهية المطلقة.
+          </p>
+        </div>
+        <div class="footer-section contact">
+          <h3>تواصل معنا</h3>
+          <ul>
+            <li><span>📍</span> القاهرة، مصر</li>
+            <li><span>📞</span> <span dir="ltr">+20 106 524 6803</span></li>
+            <li>
+              <span>✉️</span>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@iso-gm.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >info@iso-gm.com</a
+              >
+              |
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=support@iso-gm.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >support@iso-gm.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section links">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../about.html">عن ISO-GM</a></li>
+            <li><a href="../products.html">منتجاتنا</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة لشركة ISO-GM &copy; 2026</p>
+        <p style="margin-top: 8px; font-weight: 600">
+          تصميم وبرمجة
+          <span style="color: var(--primary-cl)"
+            ><a href="https://www.7elmak.com/" class="helmak"
+              >حلمك للبرمجيات والخدمات الرقمية</a
+            >
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script>
+      // 1. قاعدة بيانات المنتجات (يمكنك إضافة المزيد هنا)
+      const productsData = {
+        // car accessories
+        aczom: {
+          name: "أكزوم - إضاءة ليد أمامية",
+          price: "4500 ج.م",
+          img: "../Assets/Gallery/index/aczom.jpeg",
+          desc: "إضاءة أكزوم LED المتطورة، توفر رؤية نهارية في أحلك الظروف الليلية. مصممة لتدوم طويلاً مع نظام تبريد ذكي يمنع ارتفاع الحرارة.",
+        },
+        "aczom-d": {
+          name: "أكزوم D - إضاءة داخلية",
+          price: "3800 ج.م",
+          img: "../Assets/Gallery/index/aczom D.jpeg",
+          desc: "نظام إضاءة محيطية ذكي للسيارة من الداخل، تحكم كامل في الألوان والسطوع لتجربة قيادة فاخرة.",
+        },
+        gpne: {
+          name: "GPNE 9005 Premium",
+          price: "8500 ج.م",
+          img: "../Assets/Gallery/index/gpne 9005.jpeg",
+          desc: "الفئة الاحترافية من GPNE، أقوى توزيع ضوء متاح في السوق مع ضمان حقيقي وأداء جبار.",
+        },
+        "smart-start": {
+          name: "smart start",
+          price: "8000 ج.م",
+          img: "../Assets/Gallery/index/smart engine start.jpeg",
+          desc: "نظام تشغيل ذكي للمحرك، تشغيل وإيقاف المحرك بضغطة زر، فتح وغلق الأبواب تلقائياً.",
+        },
+        "scoota-start-stop": {
+          name: "نظام تشغيل وإيقاف المحرك",
+          price: "4500 ج.م",
+          img: "../Assets/Gallery/index/smart engine start & stop.jpeg",
+          desc: "نظام تشغيل ذكي للمحرك، تشغيل وإيقاف المحرك بضغطة زر، فتح وغلق الأبواب تلقائياً.",
+        },
+        // Car Accessories Gallery (Auto-generated)
+        "acc-60Watts-Power-Output": {
+          name: "خرج طاقة 60 واط",
+          price: "750 ج.م",
+          img: "Gallery/Car Accessories/60Watts Power Output 750.jpeg",
+          desc: "خرج طاقة 60 واط بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-7-Rear-View-mirror": {
+          name: "مرآة رؤية خلفية 7 بوصة",
+          price: "1650 ج.م",
+          img: "Gallery/Car Accessories/7'Rear View mirror 1650.jpeg",
+          desc: "مرآة رؤية خلفية 7 بوصة بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Aczom-H4-Bulb": {
+          name: "لمبة Aczom H4",
+          price: "1950 ج.م",
+          img: "Gallery/Car Accessories/Aczom H4 Bulb 1950.jpeg",
+          desc: "لمبة Aczom H4 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Aczom-Super-Power": {
+          name: "Aczom (طاقة فائقة)",
+          price: "1850 ج.م",
+          img: "Gallery/Car Accessories/Aczom Super Power 1850.jpeg",
+          desc: "Aczom (طاقة فائقة) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Advanced-Steering-Wheel-lock": {
+          name: "قفل عجلة قيادة (متطور)",
+          price: "600 ج.م",
+          img: "Gallery/Car Accessories/Advanced Steering Wheel lock 600.jpeg",
+          desc: "قفل عجلة قيادة (متطور) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Air-Intake-Pipe": {
+          name: "أنبوب سحب الهواء",
+          price: "550 ج.م",
+          img: "Gallery/Car Accessories/Air Intake Pipe 550.jpeg",
+          desc: "أنبوب سحب الهواء بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Ambient-Light-Easy-To-Install": {
+          name: "إضاءة محيطية (سهلة التركيب)",
+          price: "125 ج.م",
+          img: "Gallery/Car Accessories/Ambient Light Easy To Install 125.jpeg",
+          desc: "إضاءة محيطية (سهلة التركيب) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Android-car-Display": {
+          name: "شاشة سيارة أندرويد",
+          price: "4500 ج.م",
+          img: "Gallery/Car Accessories/Android car Display 4500.jpeg",
+          desc: "شاشة سيارة أندرويد بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Anti-Slip-Pad-Multi-Purpose": {
+          name: "وسادة مانعة للانزلاق (متعددة الاستخدامات)",
+          price: "125 ج.م",
+          img: "Gallery/Car Accessories/Anti-Slip Pad Multi-Purpose 125.jpeg",
+          desc: "وسادة مانعة للانزلاق (متعددة الاستخدامات) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Booster-Cables": {
+          name: "كابلات اشتراك",
+          price: "450 ج.م",
+          img: "Gallery/Car Accessories/Booster Cables 450.jpeg",
+          desc: "كابلات اشتراك بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Brake": {
+          name: "فرامل",
+          price: "175 ج.م",
+          img: "Gallery/Car Accessories/Brake 175.jpeg",
+          desc: "فرامل بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Brake-Disc-Cover": {
+          name: "غطاء قرص الفرامل",
+          price: "175 ج.م",
+          img: "Gallery/Car Accessories/Brake Disc Cover 175.jpeg",
+          desc: "غطاء قرص الفرامل بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Car-Cover": {
+          name: "غطاء سيارة",
+          price: "15000 ج.م",
+          img: "Gallery/Car Accessories/Car Cover 15000.jpeg",
+          desc: "غطاء سيارة بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Cl-500-Central-Door-Lock-Vehicle-Security-System": {
+          name: "نظام أمان وقفل مركزي Cl-500",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Car Accessories/Cl-500 Central Door Lock Vehicle Security System.jpeg",
+          desc: "نظام أمان وقفل مركزي Cl-500 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Cusp-Car-Alarm-System": {
+          name: "نظام إنذار Cusp",
+          price: "8500 ج.م",
+          img: "Gallery/Car Accessories/Cusp Car Alarm System 8500.jpeg",
+          desc: "نظام إنذار Cusp بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Custom-Flap-1450": {
+          name: "رفرف مخصص 1450",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Car Accessories/Custom Flap 1450.jpeg",
+          desc: "رفرف مخصص 1450 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Door-Sill-Guard": {
+          name: "حامي عتبة الباب",
+          price: "175 ج.م",
+          img: "Gallery/Car Accessories/Door Sill Guard 175.jpeg",
+          desc: "حامي عتبة الباب بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Intelligent-Lift-Sensor-System": {
+          name: "نظام حساس الرفع الذكي",
+          price: "875 ج.م",
+          img: "Gallery/Car Accessories/Intelligent Lift Sensor System 875.jpeg",
+          desc: "نظام حساس الرفع الذكي بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-Fog-Lamp-High-Power": {
+          name: "مصباح ضباب ليد (عالي الطاقة)",
+          price: "1650 ج.م",
+          img: "Gallery/Car Accessories/Led Fog Lamp High Power 1650.jpeg",
+          desc: "مصباح ضباب ليد (عالي الطاقة) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-28W": {
+          name: "مصباح أمامي ليد 28W",
+          price: "550 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight 28W 550.jpeg",
+          desc: "مصباح أمامي ليد 28W بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-55W": {
+          name: "مصباح أمامي ليد 55W",
+          price: "1150 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight 55W 1150.jpeg",
+          desc: "مصباح أمامي ليد 55W بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-65W": {
+          name: "مصباح أمامي ليد 65W",
+          price: "1350 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight 65W 1350.jpeg",
+          desc: "مصباح أمامي ليد 65W بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-D": {
+          name: "مصباح أمامي ليد D",
+          price: "1950 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight D 1950.jpeg",
+          desc: "مصباح أمامي ليد D بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-H4": {
+          name: "مصباح أمامي ليد H4",
+          price: "1950 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight H4 1950.jpeg",
+          desc: "مصباح أمامي ليد H4 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-R3": {
+          name: "مصباح أمامي ليد R3",
+          price: "675 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight R3 675.jpeg",
+          desc: "مصباح أمامي ليد R3 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-HeadLight-R6": {
+          name: "مصباح أمامي ليد R6",
+          price: "2300 ج.م",
+          img: "Gallery/Car Accessories/Led HeadLight R6 2300.jpeg",
+          desc: "مصباح أمامي ليد R6 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Led-headLight-M8-Pro": {
+          name: "مصباح أمامي ليد M8 Pro",
+          price: "650 ج.م",
+          img: "Gallery/Car Accessories/Led headLight M8 Pro 650.jpeg",
+          desc: "مصباح أمامي ليد M8 Pro بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Lumens-Led-HeadLight": {
+          name: "مصباح أمامي ليد لومينز",
+          price: "550 ج.م",
+          img: "Gallery/Car Accessories/Lumens Led HeadLight 550.jpeg",
+          desc: "مصباح أمامي ليد لومينز بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-MicroFibre-Drying-Towel": {
+          name: "منشفة مايكروفايبر",
+          price: "حجم صغير: 70 ج.م / حجم كبير: 90 ج.م",
+          img: "Gallery/Car Accessories/MicroFibre Drying Towel S70 L90.jpeg",
+          desc: "منشفة مايكروفايبر بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Panda-Smart-Engine-Start-System": {
+          name: "نظام تشغيل المحرك الذكي Panda",
+          price: "5300 ج.م",
+          img: "Gallery/Car Accessories/Panda Smart Engine Start System 5300.jpeg",
+          desc: "نظام تشغيل المحرك الذكي Panda بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Premium-Car-Seat-Covers": {
+          name: "أغطية مقاعد سيارة (فاخرة)",
+          price: "5750 ج.م",
+          img: "Gallery/Car Accessories/Premium Car Seat Covers 5750.jpeg",
+          desc: "أغطية مقاعد سيارة (فاخرة) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Premium-HandBrake-Cover": {
+          name: "غطاء فرامل يد (فاخر)",
+          price: "200 ج.م",
+          img: "Gallery/Car Accessories/Premium HandBrake Cover 200.jpeg",
+          desc: "غطاء فرامل يد (فاخر) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Premium-Panda-Window-Shade": {
+          name: "ستارة نافذة Panda (فاخرة)",
+          price: "150 ج.م",
+          img: "Gallery/Car Accessories/Premium Panda Window Shade 150.jpeg",
+          desc: "ستارة نافذة Panda (فاخرة) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Premium-Seat-Cushion": {
+          name: "وسادة مقعد (فاخرة)",
+          price: "500 ج.م",
+          img: "Gallery/Car Accessories/Premium Seat Cushion 500.jpeg",
+          desc: "وسادة مقعد (فاخرة) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Push-Start-System-Remote-Start": {
+          name: "نظام تشغيل بالبصمة وعن بعد",
+          price: "725 ج.م",
+          img: "Gallery/Car Accessories/Push Start System Remote Start 725.jpeg",
+          desc: "نظام تشغيل بالبصمة وعن بعد بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Rain-Guard": {
+          name: "واقي مطر",
+          price: "150 ج.م",
+          img: "Gallery/Car Accessories/Rain Guard 150.jpeg",
+          desc: "واقي مطر بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Remote-Starter": {
+          name: "مشغل عن بعد",
+          price: "1100 ج.م",
+          img: "Gallery/Car Accessories/Remote Starter 1100.jpeg",
+          desc: "مشغل عن بعد بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Spring-hook-Tensioner-Set": {
+          name: "طقم شداد خطاف زنبركي",
+          price: "125 ج.م",
+          img: "Gallery/Car Accessories/Spring hook Tensioner Set 125.jpeg",
+          desc: "طقم شداد خطاف زنبركي بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Seat-Belt-Stopper": {
+          name: "مصد حزام الأمان",
+          price: "75 ج.م",
+          img: "Gallery/Car Accessories/Seat Belt Stopper 75.jpeg",
+          desc: "مصد حزام الأمان بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Sun-Shade": {
+          name: "مظلة شمسية",
+          price: "100 ج.م",
+          img: "Gallery/Car Accessories/Sun Shade 100.jpeg",
+          desc: "مظلة شمسية بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Tire-Inflator-Powerful---Portable": {
+          name: "منفاخ إطارات (قوي ومحمول)",
+          price: "500 ج.م",
+          img: "Gallery/Car Accessories/Tire Inflator Powerful & Portable 500.jpeg",
+          desc: "منفاخ إطارات (قوي ومحمول) بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Vehicle-BlackBox-DVR": {
+          name: "كاميرا لوحة القيادة DVR",
+          price: "750 ج.م",
+          img: "Gallery/Car Accessories/Vehicle BlackBox DVR 750.jpeg",
+          desc: "كاميرا لوحة القيادة DVR بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Weather-Strip-Silicone": {
+          name: "شريط طقس سيليكون",
+          price: "125 ج.م",
+          img: "Gallery/Car Accessories/Weather Strip Silicone 125.jpeg",
+          desc: "شريط طقس سيليكون بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Wheel-Brace": {
+          name: "مفتاح عجل",
+          price: "400 ج.م",
+          img: "Gallery/Car Accessories/Wheel Brace 400.jpeg",
+          desc: "مفتاح عجل بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Xenon-Hid-Bulb": {
+          name: "لمبة زينون HID",
+          price: "775 ج.م",
+          img: "Gallery/Car Accessories/Xenon Hid Bulb 775.jpeg",
+          desc: "لمبة زينون HID بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "acc-Xtremechip-Tuning-Box": {
+          name: "شريحة تعديل الأداء Xtremechip",
+          price: "1500 ج.م",
+          img: "Gallery/Car Accessories/Xtremechip Tuning Box 1500.jpeg",
+          desc: "شريحة تعديل الأداء Xtremechip بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+
+        // Accessories Gallery (Auto-generated)
+        "axs-اسبراي-مصلب-كبير": {
+          name: "اسبراي مصلب كبير",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/اسبراي مصلب كبير.png",
+          desc: "اسبراي مصلب كبير بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-اسبراي-مصلب-وسط": {
+          name: "اسبراي مصلب وسط",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/اسبراي مصلب وسط.png",
+          desc: "اسبراي مصلب وسط بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-جمالة-ماليزي": {
+          name: "جمالة ماليزي",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/جمالة ماليزي.png",
+          desc: "جمالة ماليزي بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-سيلكون-الماني-فيكتور-رينز": {
+          name: "سيلكون الماني فيكتور رينز",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/سيلكون الماني فيكتور رينز.png",
+          desc: "سيلكون الماني فيكتور رينز بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-سيليكون-حراري-مايليري": {
+          name: "سيليكون حراري مايليري",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/سيليكون حراري مايليري.png",
+          desc: "سيليكون حراري مايليري بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-شحم-اسبراي": {
+          name: "شحم اسبراي",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/شحم اسبراي.png",
+          desc: "شحم اسبراي بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-شحم-بريفكس": {
+          name: "شحم بريفكس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/شحم بريفكس.png",
+          desc: "شحم بريفكس بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-شريط-لحام-تايواني": {
+          name: "شريط لحام تايواني",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/شريط لحام تايواني.png",
+          desc: "شريط لحام تايواني بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-شريط-لحام-قماش": {
+          name: "شريط لحام قماش",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/شريط لحام قماش.png",
+          desc: "شريط لحام قماش بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-قماش-بطاريه-حديد": {
+          name: "قماش بطاريه حديد",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/قماش بطاريه حديد.png",
+          desc: "قماش بطاريه حديد بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-قماش-بطاريه-نحاس": {
+          name: "قماش بطاريه نحاس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/قماش بطاريه نحاس.png",
+          desc: "قماش بطاريه نحاس بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-لحام-حديد-ايبوكسي": {
+          name: "لحام حديد ايبوكسي",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/لحام حديد ايبوكسي.png",
+          desc: "لحام حديد ايبوكسي بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-لحام-شفاف-A-B": {
+          name: "لحام شفاف A B",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/لحام شفاف A B.png",
+          desc: "لحام شفاف A B بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-مزيل-صدأ-سبراي-كبير": {
+          name: "مزيل صدأ سبراي كبير",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/مزيل صدأ سبراي كبير.png",
+          desc: "مزيل صدأ سبراي كبير بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-مزيل-صدأ-صيني": {
+          name: "مزيل صدأ صيني",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/مزيل صدأ صيني.png",
+          desc: "مزيل صدأ صيني بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-منظف-الكترونيات-اكاي": {
+          name: "منظف الكترونيات اكاي",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/منظف الكترونيات اكاي.png",
+          desc: "منظف الكترونيات اكاي بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-منظف-انجكشن": {
+          name: "منظف انجكشن",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/منظف انجكشن.png",
+          desc: "منظف انجكشن بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+        "axs-منظف-كربراتير": {
+          name: "منظف كربراتير",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Accessories/منظف كربراتير.png",
+          desc: "منظف كربراتير بجودة عالية ومناسب لجميع الاستخدامات.",
+        },
+
+        // Oils Gallery (Auto-generated)
+        "oil-ATF-SP-III": {
+          name: "ATF SP III",
+          price: "524 ج.م",
+          img: "Gallery/Oils/ATF SP III 524.jpeg",
+          desc: "زيت ATF SP III بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Aisin-Fully-Synthetic-CVT-Fluid": {
+          name: "Aisin Fully Synthetic CVT Fluid",
+          price: "624 ج.م",
+          img: "Gallery/Oils/Aisin Fully Synthetic CVT Fluid 624.jpeg",
+          desc: "زيت Aisin Fully Synthetic CVT Fluid بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-FanFaro-5W-40-VSX-Fully-Synthetic": {
+          name: "FanFaro 5W-40 VSX Fully Synthetic",
+          price: "1994 ج.م",
+          img: "Gallery/Oils/FanFaro 5W-40 VSX Fully Synthetic 1994.jpeg",
+          desc: "زيت FanFaro 5W-40 VSX Fully Synthetic بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-FanFaro-CVT": {
+          name: "FanFaro CVT",
+          price: "649 ج.م",
+          img: "Gallery/Oils/FanFaro CVT 649.jpeg",
+          desc: "زيت FanFaro CVT بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-FanFaro-G13-Coolant": {
+          name: "FanFaro G13 Coolant",
+          price: "599 ج.م",
+          img: "Gallery/Oils/FanFaro G13 Coolant 599.jpeg",
+          desc: "زيت FanFaro G13 Coolant بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-FanFaro-GM-Dexron-VI-ATF-LV": {
+          name: "FanFaro GM Dexron VI ATF LV",
+          price: "549 ج.م",
+          img: "Gallery/Oils/FanFaro GM Dexron VI ATF LV 549.jpeg",
+          desc: "زيت FanFaro GM Dexron VI ATF LV بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-FanFaro-GSX50": {
+          name: "FanFaro GSX50",
+          price: "899 ج.م",
+          img: "Gallery/Oils/FanFaro GSX50 899.jpeg",
+          desc: "زيت FanFaro GSX50 بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Gasoline-Premium-Eagle": {
+          name: "Gasoline Premium Eagle",
+          price: "23299 ج.م",
+          img: "Gallery/Oils/Gasoline Premium Eagle 23299.jpeg",
+          desc: "زيت Gasoline Premium Eagle بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Gasoline-Speed-Eagle": {
+          name: "Gasoline Speed Eagle",
+          price: "1750 ج.م",
+          img: "Gallery/Oils/Gasoline Speed Eagle 1750.jpeg",
+          desc: "زيت Gasoline Speed Eagle بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Hanz-ATF-Super-Fluid": {
+          name: "Hanz ATF Super Fluid",
+          price: "149 ج.م",
+          img: "Gallery/Oils/Hanz ATF Super Fluid 149.jpeg",
+          desc: "زيت Hanz ATF Super Fluid بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Hanz-Brake-Fluid-Dot-3": {
+          name: "Hanz Brake Fluid Dot 3",
+          price: "100 ج.م",
+          img: "Gallery/Oils/Hanz Brake Fluid Dot 3 100.jpeg",
+          desc: "زيت Hanz Brake Fluid Dot 3 بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mannol-8220-CVT-NS-3": {
+          name: "Mannol 8220 CVT NS-3",
+          price: "624 ج.م",
+          img: "Gallery/Oils/Mannol 8220 CVT NS-3 624.jpeg",
+          desc: "زيت Mannol 8220 CVT NS-3 بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mannol-Dexron-VI-8307": {
+          name: "Mannol Dexron VI 8307",
+          price: "620 ج.م",
+          img: "Gallery/Oils/Mannol Dexron VI 8307 620.jpeg",
+          desc: "زيت Mannol Dexron VI 8307 بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mannol-G11-Coolant": {
+          name: "Mannol G11 Coolant",
+          price: "749 ج.م",
+          img: "Gallery/Oils/Mannol G11 Coolant 749.jpeg",
+          desc: "زيت Mannol G11 Coolant بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mannol-G12--Coolant": {
+          name: "Mannol G12+ Coolant",
+          price: "749 ج.م",
+          img: "Gallery/Oils/Mannol G12+ Coolant 749.jpeg",
+          desc: "زيت Mannol G12+ Coolant بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mobil-5W-40-Advanced-Full-Synthetic": {
+          name: "Mobil 5W-40 Advanced Full Synthetic",
+          price: "2649 ج.م",
+          img: "Gallery/Oils/Mobil 5W-40 Advanced Full Synthetic 2649.jpeg",
+          desc: "زيت Mobil 5W-40 Advanced Full Synthetic بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mobil-Super-10W-40-Premium-Multi-Grade": {
+          name: "Mobil Super 10W-40 Premium Multi-Grade",
+          price: "1379 ج.م",
+          img: "Gallery/Oils/Mobil Super 10W-40 Premium Multi-Grade 1379.jpeg",
+          desc: "زيت Mobil Super 10W-40 Premium Multi-Grade بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Mobil-Special-20W-50-Premium-Mineral": {
+          name: "Mobil Special 20W-50 Premium Mineral",
+          price: "950 ج.م",
+          img: "Gallery/Oils/Mobil Special 20W-50 Premium Mineral 950.jpeg",
+          desc: "زيت Mobil Special 20W-50 Premium Mineral بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-QPC-One-Extra": {
+          name: "QPC One Extra",
+          price: "2249 ج.م",
+          img: "Gallery/Oils/QPC One Extra 2249.jpeg",
+          desc: "زيت QPC One Extra بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-QPC-Super-City-SF": {
+          name: "QPC Super City SF",
+          price: "787 ج.م",
+          img: "Gallery/Oils/QPC Super City SF 787.jpeg",
+          desc: "زيت QPC Super City SF بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-QPC-XPL": {
+          name: "QPC XPL",
+          price: "1073 ج.م",
+          img: "Gallery/Oils/QPC XPL 1073.jpeg",
+          desc: "زيت QPC XPL بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Ranero-RSX-7-5": {
+          name: "Ranero RSX 7.5",
+          price: "1994 ج.م",
+          img: "Gallery/Oils/Ranero RSX 7.5 1994.jpeg",
+          desc: "زيت Ranero RSX 7.5 بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Shell-Helix-HX3-20W-50-Premium-Mineral-حجم-كبير": {
+          name: "Shell Helix HX3 20W-50 Premium Mineral (حجم كبير)",
+          price: "849 ج.م",
+          img: "Gallery/Oils/Shell Helix HX3 20W-50 Premium Mineral L-849.jpeg",
+          desc: "زيت Shell Helix HX3 20W-50 Premium Mineral (حجم كبير) بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Shell-Helix-HX3-20W-50-Premium-Mineral-حجم-صغير": {
+          name: "Shell Helix HX3 20W-50 Premium Mineral (حجم صغير)",
+          price: "249 ج.م",
+          img: "Gallery/Oils/Shell Helix HX3 20W-50 Premium Mineral S-249.jpeg",
+          desc: "زيت Shell Helix HX3 20W-50 Premium Mineral (حجم صغير) بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Shell-Helix-HX5-15W-50-Premium-Mineral": {
+          name: "Shell Helix HX5 15W-50 Premium Mineral",
+          price: "1299 ج.م",
+          img: "Gallery/Oils/Shell Helix HX5 15W-50 Premium Mineral 1299.jpeg",
+          desc: "زيت Shell Helix HX5 15W-50 Premium Mineral بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Shell-Helix-Ultra-5W-40-Fully-Synthetic": {
+          name: "Shell Helix Ultra 5W-40 Fully Synthetic",
+          price: "26299 ج.م",
+          img: "Gallery/Oils/Shell Helix Ultra 5W-40 Fully Synthetic 26299.jpeg",
+          desc: "زيت Shell Helix Ultra 5W-40 Fully Synthetic بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Total-Motor-Oil-GF-5-20W-50-MultiGrade": {
+          name: "Total Motor Oil GF-5 20W-50 MultiGrade",
+          price: "799 ج.م",
+          img: "Gallery/Oils/Total Motor Oil GF-5 20W-50 MultiGrade 799.jpeg",
+          desc: "زيت Total Motor Oil GF-5 20W-50 MultiGrade بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "oil-Total-Quartz-7000-10W-40-Semi-Synthetic": {
+          name: "Total Quartz 7000 10W-40 Semi-Synthetic",
+          price: "1249 ج.م",
+          img: "Gallery/Oils/Total Quartz 7000 10W-40 Semi-Synthetic 1249.jpeg",
+          desc: "زيت Total Quartz 7000 10W-40 Semi-Synthetic بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "sp-wheel-cylinder-1": {
+          name: "ماستر عجل - BYD F3",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/BYD F3.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات BYD F3، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-2": {
+          name: "ماستر عجل - Daewoo lanos",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Daewoo lanos.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Daewoo lanos، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-3": {
+          name: "ماستر عجل - Daihatsu nubira",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Daihatsu nubira.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Daihatsu nubira، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-4": {
+          name: "ماستر عجل - Honda civic 2005 - 2018",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Honda civic 2005 - 2018.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Honda civic 2005 - 2018، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-5": {
+          name: "ماستر عجل - Honda civic",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Honda civic.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Honda civic، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-6": {
+          name: "ماستر عجل - Hyundai Matrix 2 Port 2001 - 2008",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Hyundai Matrix 2 Port 2001 - 2008.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Hyundai Matrix 2 Port 2001 - 2008، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-7": {
+          name: "ماستر عجل - Hyundai Matrix 4 Port 2001 - 2008",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Hyundai Matrix 4 Port 2001 - 2008.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Hyundai Matrix 4 Port 2001 - 2008، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-8": {
+          name: "ماستر عجل - Hyundai Verna",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Hyundai Verna.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Hyundai Verna، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-9": {
+          name: "ماستر عجل - Hyundai accent",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Hyundai accent.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Hyundai accent، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-10": {
+          name: "ماستر عجل - Kia Carens 2014",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Kia Carens 2014.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Kia Carens 2014، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-11": {
+          name: "ماستر عجل - Lexus",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Lexus.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Lexus، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-12": {
+          name: "ماستر عجل - MD - BVD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/MD - BVD.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات MD - BVD، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-13": {
+          name: "ماستر عجل - N17",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/N17.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات N17، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-14": {
+          name: "ماستر عجل - Nissan sunny n16",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Nissan sunny n16.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Nissan sunny n16، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-15": {
+          name: "ماستر عجل - Toyota Avanza, Manual 2004 - 2011",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Toyota Avanza, Manual 2004 - 2011.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Toyota Avanza, Manual 2004 - 2011، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-16": {
+          name: "ماستر عجل - Toyota Aveo, Automatic 2006 - 2011",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Toyota Aveo, Automatic 2006 - 2011.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Toyota Aveo, Automatic 2006 - 2011، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-17": {
+          name: "ماستر عجل - Toyota Corolla Altis 2007 - 2013",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Toyota Corolla Altis 2007 - 2013.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Toyota Corolla Altis 2007 - 2013، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-18": {
+          name: "ماستر عجل - Toyota corolla 2007 - 2001",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/Toyota corolla 2007 - 2001.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات Toyota corolla 2007 - 2001، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-19": {
+          name: "ماستر عجل - chery amirand",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/chery amirand.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات chery amirand، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-20": {
+          name: "ماستر عجل - chevrolet aveo",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/chevrolet aveo.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات chevrolet aveo، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-21": {
+          name: "ماستر عجل - honda accent",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/honda accent.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات honda accent، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-22": {
+          name: "ماستر عجل - kia cerato",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/kia cerato.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات kia cerato، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-23": {
+          name: "ماستر عجل - nissan sunny n17",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/nissan sunny n17.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات nissan sunny n17، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-24": {
+          name: "ماستر عجل - toyota avanza",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/toyota avanza.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات toyota avanza، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-25": {
+          name: "ماستر عجل - toyota corolla 94",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/toyota corolla 94.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات toyota corolla 94، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-26": {
+          name: "ماستر عجل - toyota corolla",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/toyota corolla.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات toyota corolla، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-27": {
+          name: "ماستر عجل - جلي ام جراند",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/جلي ام جراند.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات جلي ام جراند، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-28": {
+          name: "ماستر عجل - لانوس بوما 2 مخرج",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/لانوس بوما 2 مخرج.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات لانوس بوما 2 مخرج، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-29": {
+          name: "ماستر عجل - لانوس بوما 4 مخرج",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/لانوس بوما 4 مخرج.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات لانوس بوما 4 مخرج، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-30": {
+          name: "ماستر عجل - لنترا HD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/لنترا HD.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات لنترا HD، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-31": {
+          name: "ماستر عجل - نيسان n16 2 مخرج",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/نيسان n16 2 مخرج.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات نيسان n16 2 مخرج، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-wheel-cylinder-32": {
+          name: "ماستر عجل - نيسان n16 4 مخرج",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/مساتر عجل/نيسان n16 4 مخرج.png",
+          desc: "ماستر عجل فرامل عالي الجودة متوافق مع سيارات نيسان n16 4 مخرج، مصمم لضمان استجابة فرامل مثالية وأمان كامل على الطريق.",
+        },
+        "sp-clutch-master-upper-1": {
+          name: "ماستر دبرياج علوي - BVD F3 لانسر 1600",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/BVD F3 لانسر 1600.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات BVD F3 لانسر 1600، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-2": {
+          name: "ماستر دبرياج علوي - N16 نيسان",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/N16 نيسان .png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات N16 نيسان، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-3": {
+          name: "ماستر دبرياج علوي - النترا HD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/النترا HD.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات النترا HD، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-4": {
+          name: "ماستر دبرياج علوي - تويوتا افانزا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/تويوتا افانزا.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات تويوتا افانزا، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-5": {
+          name: "ماستر دبرياج علوي - جيلي امجراند",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/جيلي امجراند.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات جيلي امجراند، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-6": {
+          name: "ماستر دبرياج علوي - دايو لانوس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/دايو لانوس.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات دايو لانوس، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-7": {
+          name: "ماستر دبرياج علوي - دايو نوبيرا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/دايو نوبيرا.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات دايو نوبيرا، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-8": {
+          name: "ماستر دبرياج علوي - كورولا 2001",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/كورولا 2001.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات كورولا 2001، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-9": {
+          name: "ماستر دبرياج علوي - لانسر بومة",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/لانسر بومة.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات لانسر بومة، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-10": {
+          name: "ماستر دبرياج علوي - ميتسوبيشي لانسر 2000 - 1997",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/ميتسوبيشي لانسر 2000 - 1997.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات ميتسوبيشي لانسر 2000 - 1997، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-11": {
+          name: "ماستر دبرياج علوي - نيسان N17",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/نيسان N17.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات نيسان N17، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-12": {
+          name: "ماستر دبرياج علوي - هيونداي فيرنا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/هيونداي فيرنا.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات هيونداي فيرنا، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-master-upper-13": {
+          name: "ماستر دبرياج علوي - هيونداي ماتريكس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/ماستر دبرياج علوى/هيونداي ماتريكس.png",
+          desc: "ماستر دبرياج علوي عالي الجودة متوافق مع سيارات هيونداي ماتريكس، مصمم ومصنع بأعلى المعايير لضمان أداء سلس وعمر افتراضي طويل.",
+        },
+        "sp-clutch-kit-1": {
+          name: "طقم دبرياج 1",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/طقم دبرياج/1.png",
+          desc: "طقم دبرياج عالي الجودة متوافق مع مجموعة واسعة من السيارات، مصمم لضمان نقل حركة سلس وأداء مثالي وعمر افتراضي طويل.",
+        },
+        "sp-clutch-kit-2": {
+          name: "طقم دبرياج 2",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/طقم دبرياج/2.png",
+          desc: "طقم دبرياج عالي الجودة متوافق مع مجموعة واسعة من السيارات، مصمم لضمان نقل حركة سلس وأداء مثالي وعمر افتراضي طويل.",
+        },
+        "sp-wheel-hose-1": {
+          name: "خرطوم عجل 1",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/1.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-wheel-hose-2": {
+          name: "خرطوم عجل 2",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/2.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-wheel-hose-3": {
+          name: "خرطوم عجل 3",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/3.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-wheel-hose-4": {
+          name: "خرطوم عجل 4",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/4.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-wheel-hose-5": {
+          name: "خرطوم عجل 5",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/5.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-wheel-hose-6": {
+          name: "خرطوم عجل 6",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم عجل/6.png",
+          desc: "خرطوم عجل عالي الجودة مصنوع من مواد متينة تتحمل الضغط العالي والحرارة، يضمن انتقالاً سليماً لسائل الفرامل وأداءً آمناً على الطريق.",
+        },
+        "sp-air-filter-accn-new-2012-rio4-i20": {
+          name: "اكسنت نيو 2012 - ريو4 - i20",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر هواء/اكسنت نيو 2012 - ريو4 - i20.png",
+          desc: "فلتر هواء مناسب لاكسنت نيو 2012 و ريو4 و i20 بجودة عالية لحماية المحرك وتحسين الأداء.",
+        },
+        "sp-air-filter-elantra-ad-serato-2-0l": {
+          name: "النترا AD - سيراتو 2.0L",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر هواء/النترا AD - سيراتو 2.0L.png",
+          desc: "فلتر هواء مصمم للنترا AD وسيراتو 2.0L لضمان تدفق هواء نظيف وحماية المحرك.",
+        },
+        "sp-air-filter-elantra-hd": {
+          name: "النترا HD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر هواء/النترا HD.png",
+          desc: "فلتر هواء متوافق مع النترا HD يوفر أداءً ممتازاً وعمر خدمة طويل.",
+        },
+        "sp-air-filter-hyundai-accent-1500": {
+          name: "هيونداي اكسنت 1500",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر هواء/هيونداي اكسنت 1500.png",
+          desc: "فلتر هواء متوافق مع هيونداي اكسنت 1500 للحفاظ على كفاءة المحرك وتنقية الهواء الوارد.",
+        },
+        "sp-air-filter-hyundai-accent": {
+          name: "هيونداي اكسنت",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر هواء/هيونداي اكسنت.png",
+          desc: "فلتر هواء عام لسيارات هيونداي اكسنت بجودة تصنيع عالية وأداء مستقر.",
+        },
+        "sp-valve-cover-hyundai-accent": {
+          name: "هيونداي اسينت",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جوانات غطاء تاكيهات/هيونداي اسينت.png",
+          desc: "جوانات غطاء تاكيهات خاصة لهيونداي اسينت بجودة عالية.",
+        },
+        "sp-valve-cover-hyundai-excel": {
+          name: "هيونداي اكسل",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جوانات غطاء تاكيهات/هيونداي اكسل.png",
+          desc: "جوانات غطاء تاكيهات مصممة خصيصاً لهيونداي اكسل مع متانة طويلة.",
+        },
+        "sp-valve-cover-hyundai-elantra-sonata": {
+          name: "هيونداي النترا & سوناتا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جوانات غطاء تاكيهات/هيونداي النترا & سوناتا.png",
+          desc: "جوانات غطاء تاكيهات متوافقة مع هيونداي النترا وسوناتا بأداء ثابت وجودة عالية.",
+        },
+        "sp-valve-cover-hyundai-verna-accent-cerato-elantra-hd-md": {
+          name: "هيونداي فيرنا - اسينت - سيراتو - النترا HD - MD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جوانات غطاء تاكيهات/هيونداي فيرنا - اسينت - سيراتو - النترا HD - MD.png",
+          desc: "جوانات غطاء تاكيهات متعددة الموديلات تغطي فيرنا، اسينت، سيراتو، النترا HD وMD.",
+        },
+        "sp-valve-cover-hyundai-verna": {
+          name: "هيونداي فيرنا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جوانات غطاء تاكيهات/هيونداي فيرنا.png",
+          desc: "جوانات غطاء تاكيهات لهيونداي فيرنا بجودة عالية ومقاومة للتآكل.",
+        },
+        "sp-cabin-filter-nissan-sunny-2008": {
+          name: "نيسان صني 2008",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/نيسان صني 2008.png",
+          desc: "فلتر تكييف مناسب لسيارة نيسان صني 2008، يوفر تدفق هواء نقي وتبريد مستقر.",
+        },
+        "sp-cabin-filter-nissan-qashqai": {
+          name: "نيسان قشقاي",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/نيسان قشقاي.png",
+          desc: "فلتر تكييف خاص بسيارة نيسان قشقاي، مصمم لتوفير هواء نقي ومريح.",
+        },
+        "sp-cabin-filter-hyundai-lx35-md": {
+          name: "هيونداي lx35 - MD",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/هيونداي lx35 - MD.png",
+          desc: "فلتر تكييف هيونداي lx35 - MD بجودة عالية لتبريد فعال وأداء ثابت.",
+        },
+        "sp-cabin-filter-hyundai-elantra-tucson-2020": {
+          name: "هيونداي النترا - توسان 2020",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/هيونداي النترا  - توسان 2020.png",
+          desc: "فلتر تكييف مناسب لهيونداي النترا وتوسان 2020 لتوفير هواء نظيف وتبريد مستمر.",
+        },
+        "sp-cabin-filter-hyundai-verna": {
+          name: "هيونداي فيرنا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/هيونداي فيرنا.png",
+          desc: "فلتر تكييف لهيونداي فيرنا بجودة عالية وتحكّم ممتاز في درجة الحرارة.",
+        },
+        "sp-cabin-filter-hyundai-matrix": {
+          name: "هيونداي ماتريكس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/فلاتر تكيف/هيونداي ماتريكس.png",
+          desc: "فلتر تكييف هيونداي ماتريكس يوفر هواء نقي داخل المقصورة وأداء تبريد ثابت.",
+        },
+        "sp-oil-seal-rasas-lanos": {
+          name: "استك رساس لانوس",
+          price: "85 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/استك رساس لانوس 85.png",
+          desc: "اويل سيل استك رساس لانوس عالي الجودة لتوفير أداء موثوق ومقاومة للتسرب.",
+        },
+        "sp-oil-seal-kit": {
+          name: "اويل سيل طقم كيت",
+          price: "35 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل طقم كيت 35.png",
+          desc: "اويل سيل طقم كيت معتمد للاستخدام في أنظمة الكاتينة لتشغيل سلس ومتين.",
+        },
+        "sp-oil-seal-takitak-lancer": {
+          name: "اويل سيل غطاء تاكيتاك لانسر",
+          price: "35 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل غطاء تاكيتاك لانسر 35.png",
+          desc: "اويل سيل غطاء تاكيتاك لانسر مصمم بدقة لتحمل الحرارة والضغط مع حماية محكمة.",
+        },
+        "sp-oil-seal-firna-divider": {
+          name: "اويل سيل تقسيمه فيرنا",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه فيرنا 40.png",
+          desc: "اويل سيل تقسيمه فيرنا متين ومناسب للاستخدام في أنظمة التبريد والعزل.",
+        },
+        "sp-oil-seal-lanos-divider": {
+          name: "اويل سيل تقسيمه لانوس",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه لانوس 40.png",
+          desc: "اويل سيل تقسيمه لانوس مصنوع من مواد عالية الجودة ليضمن ثبات الأداء ومقاومة التسرب.",
+        },
+        "sp-oil-seal-lancer-divider": {
+          name: "اويل سيل تقسيمه لانسر",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه لانسر 40.png",
+          desc: "اويل سيل تقسيمه لانسر عالي الجودة لمقاومة التسرب وضمان أداء ثابت.",
+        },
+        "sp-oil-seal-excel-divider": {
+          name: "اويل سيل تقسيمه هيونداي اكسل",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه هيونداي اكسل 40.png",
+          desc: "اويل سيل تقسيمه هيونداي اكسل متين ومناسب لأنظمة التوقيت والتبريد.",
+        },
+        "sp-oil-seal-corolla-divider": {
+          name: "اويل سيل تقسيمه كورولا",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه كورولا 40.png",
+          desc: "اويل سيل تقسيمه كورولا مصنوع بدقة لضمان إحكام مثالي ومقاومة التآكل.",
+        },
+        "sp-oil-seal-firna-front-wheel": {
+          name: "اويل سيل عجل امامي فيرنا",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عجل امامي فيرنا 60.png",
+          desc: "اويل سيل عجل امامي فيرنا لحماية محكمة ومنع تسرب الزيوت من محور العجل الأمامي.",
+        },
+        "sp-oil-seal-lanos-rear-wheel": {
+          name: "اويل سيل عجل خلفي لانوس",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عجل خلفي لانوس 60.png",
+          desc: "اويل سيل عجل خلفي لانوس عالي المتانة لضمان أداء موثوق للعجلة الخلفية.",
+        },
+        "sp-oil-seal-shahin-rear-wheel": {
+          name: "اويل سيل عجل خلفي شاهين",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عجل خلفي شاهين 50.png",
+          desc: "اويل سيل عجل خلفي شاهين مصمم لمقاومة الضغط والحرارة مع حماية فعالة من التسرب.",
+        },
+        "sp-oil-seal-lancer-rear-wheel": {
+          name: "اويل سيل عجل خلفي لانسر",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عجل خلفي لانسر 50.png",
+          desc: "اويل سيل عجل خلفي لانسر لضمان إحكام محكم وأداء طويل الأمد.",
+        },
+        "sp-oil-seal-lanos-cam": {
+          name: "اويل سيل كامة لانوس",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كامة لانوس 50.png",
+          desc: "اويل سيل كامة لانوس عالي الجودة لحماية عمود الكامات من تسرب الزيت.",
+        },
+        "sp-oil-seal-nubira-cam": {
+          name: "اويل سيل كامة نوبيرا - اوبترا",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كامة نوبيرا - اوبترا 50.png",
+          desc: "اويل سيل كامة نوبيرا - اوبترا متين ومناسب لحماية نظام الكامات.",
+        },
+        "sp-oil-seal-toyota-cv": {
+          name: "اويل سيل كولبن - تويوتا - 2008",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كولبن - تويوتا - 2008 60.png",
+          desc: "اويل سيل كولبن تويوتا 2008 لحماية محكمة لمحور الكوبلن ومنع تسرب الشحم.",
+        },
+        "sp-oil-seal-maruti-cv": {
+          name: "اويل سيل موبلن سوزوكي ماروتى",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل موبلن سوزوكي ماروتى 60.png",
+          desc: "اويل سيل موبلن سوزوكي ماروتى عالي الجودة لحماية محور الحركة.",
+        },
+        "sp-oil-seal-firna-manual-cv": {
+          name: "اويل سيل كوبلن صاج مانيوال هيونداي فيرنا",
+          price: "90 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كولبن صاج مانيوال هيونداي فيرنا 90.png",
+          desc: "اويل سيل كوبلن صاج مانيوال هيونداي فيرنا لضمان إحكام مثالي ومقاومة التآكل.",
+        },
+        "sp-clutch-bearing-nissan-sunny-n6-190": {
+          name: "بلى دبرياج نيسان صني N16",
+          price: "190 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بلى دبرياج نيسان صني N6 190.png",
+          desc: "بلى دبرياج نيسان صني N16 مناسب للسيارات التي تتطلب أداءً ثابتًا ومتانة عالية.",
+        },
+        "sp-clutch-bearing-verna-accent-fabric-320": {
+          name: "بلية دبرياج فيرنا - اكسنت وش فبر",
+          price: "320 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بلية دبرياج فيرنا - اكسنت وش فبر 320.png",
+          desc: "بلية دبرياج فيرنا - اكسنت وش فبر مصممة لتوفير أداء ممتاز مع تقليل الاهتزازات.",
+        },
+        "sp-clutch-bearing-axel-245": {
+          name: "بليه دبرياج اكسل",
+          price: "245 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج اكسل 245.png",
+          desc: "بليه دبرياج اكسل عالية الجودة لتمكين التشغيل السلس ونقل القوة بكفاءة.",
+        },
+        "sp-clutch-bearing-corolla-2006-275": {
+          name: "بليه دبرياج كورولا 2006",
+          price: "275 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج كورولا 2006 275.png",
+          desc: "بليه دبرياج كورولا 2006 متوافقة مع موديلات كورولا التي تحتاج إلى أداء ثابت ومتين.",
+        },
+        "sp-clutch-bearing-corolla-93-2001-275": {
+          name: "بليه دبرياج كورولا 93 - 2001",
+          price: "275 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج كورولا 93 - 2001 275.png",
+          desc: "بليه دبرياج كورولا 93 - 2001 توفر ثباتًا ممتازًا ومتانة عالية في الاستخدام اليومي.",
+        },
+        "sp-clutch-bearing-lancer-boma-kristalla-350": {
+          name: "بليه دبرياج لانسر بومة - كريستاله",
+          price: "350 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج لانسر بومة - كريستاله 350.png",
+          desc: "بليه دبرياج لانسر بومة - كريستاله مناسبة للسيارات التي تتطلب جودة عالية وتوافقًا ممتازًا.",
+        },
+        "sp-clutch-bearing-lanos-fabric-305": {
+          name: "بليه دبرياج لانوس وش فبر",
+          price: "305 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج لانوس وش فبر 305.png",
+          desc: "بليه دبرياج لانوس وش فبر مصممة لتوفير أداء موثوق به مع حماية طويلة للأنظمة.",
+        },
+        "sp-clutch-bearing-matrix-elantra-2005-iron-370": {
+          name: "بليه دبرياج ماتريكس - النترا 2005 وش حديد",
+          price: "370 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/بليه دبرياج ماتريكس - النترا 2005 وش حديد 370.png",
+          desc: "بليه دبرياج ماتريكس - النترا 2005 وش حديد توفر قوة تشغيل ممتازة ومتانة عالية.",
+        },
+        "sp-clutch-bearing-honda-byd-2015-245": {
+          name: "ماكينة هوندا BYD 2015 بليه دبرياج",
+          price: "245 ج.م",
+          img: "Gallery/Spare Parts/بلى دبرياج/ماكينه هوندا BYD 2015 بليه دبرياج 245.png",
+          desc: "ماكينة هوندا BYD 2015 بليه دبرياج مناسبة للتركيب في موديلات BYD 2015 مع جودة ممتازة.",
+        },
+        "sp-timing-tensioner-bearing-1": {
+          name: "بليه شداد كاتينه فيرنا",
+          price: "775 ج.م",
+          img: "Gallery/Spare Parts/بلى شداد كاتينة/1.png",
+          desc: "بلى شداد كاتينه عالية الجودة، مصممة لضمان توتر الكاتينة المثالي وتقليل الاهتزازات.",
+        },
+        "sp-timing-tensioner-bearing-2": {
+          name: "بلى شداد كاتينه لانوس وافيو",
+          price: "775 ج.م",
+          img: "Gallery/Spare Parts/بلى شداد كاتينة/2.png",
+          desc: "بلى شداد كاتينه لانوس وافيو عالية الجودة، مصممة لضمان توتر الكاتينة المثالي وتقليل الاهتزازات.",
+        },
+        "sp-timing-tensioner-bearing-3": {
+          name: "طقم بلى كاتينه نوبيرا",
+          price: "425 ج.م",
+          img: "Gallery/Spare Parts/بلى شداد كاتينة/3.png",
+          desc: "طقم بلى كاتينه نوبيرا عالي الجودة، مصممة لضمان توتر الكاتينة المثالي وتقليل الاهتزازات.",
+        },
+        "oil-mannol-ATF-SP-III": {
+          name: "mannol ATF SP-III",
+          price: "545 ج.م",
+          img: "Gallery/Oils/mannol ATF SP-III 545.jpeg",
+          desc: "زيت mannol ATF SP-III بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "sp-power-hose-1": {
+          name: "خرطوم باور - افيو",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/افيو.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-power-hose-2": {
+          name: "خرطوم باور - اوبترا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/اوبترا.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-power-hose-3": {
+          name: "خرطوم باور - دايو اوبيرا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/دايو اوبيرا.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-power-hose-4": {
+          name: "خرطوم باور - سيراتو 2010",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/سيراتو 2010.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-power-hose-5": {
+          name: "خرطوم باور - فيرنا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/فيرنا.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-power-hose-6": {
+          name: "خرطوم باور - لانسر بوما",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/خرطوم باور/لانسر بوما.png",
+          desc: "خرطوم باور عالي الجودة مصنوع من مطاط مقوى يتحمل ضغط سائل التوجيه، يضمن أداءً سلساً ودقيقاً لنظام التوجيه بالضغط الهيدروليكي.",
+        },
+        "sp-water-outlet-kaz3a-axl": {
+          name: "كزعة مياه سفلى - كاوتش اكسيل",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/كوعة مياه/كزعه مياه سفلى كاوتش اكسيل.png",
+          desc: "كزعة مياه سفلى عالية الجودة متوافقة مع كاوتش اكسيل، مصممة لتحمل الضغط وتضمن تدفق سليم للمياه.",
+        },
+        "sp-water-outlet-kotcha-masora-hotay-verna": {
+          name: "كوتشة ماسورة مياه - هوتاي فيرنا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/كوعة مياه/كوتشة ماسوره مياه هوتاي فيرنا.png",
+          desc: "كوتشة ماسورة مياه أصلية لهوتاي فيرنا، مصممة لتوفير إحكام ممتاز ومنع التسرب في نظام التبريد.",
+        },
+        "sp-water-outlet-ko3a-lanos-korba-mamoura-mia": {
+          name: "كوعه كاوتش لانوس من القربة لمامورة مياه",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/كوعة مياه/كوعه كاوتش لانوس من القربة لمامورة مياه.png",
+          desc: "كوعه مياه مخصصة لسيارة لانوس، تركيبة مطاطية متينة ومناسبة للمامورة لضمان عدم تسرب المياه.",
+        },
+        "sp-water-outlet-ko3a-mia-safla-axel": {
+          name: "كوعه مياه سفلى - كاوتش اكسيل",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/كوعة مياه/كوعه مياه سفلى كاوتش اكسيل.png",
+          desc: "كوعه مياه سفلى متوافقة مع كاوتش اكسيل، مصممة لتحمل درجات الحرارة العالية والضغط داخل نظام التبريد.",
+        },
+        "sp-water-outlet-ko3a-mia-safla-noira": {
+          name: "كوعه مياه سفلى - كاوتش نويرا",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/كوعة مياه/كوعه مياه سفلى كاوتش نويرا.png",
+          desc: "كوعه مياه سفلى عالية الجودة لسيارة كاوتش نويرا، تقدم أداء موثوقاً في نظام التبريد وتمنع التسرب.",
+        },
+        "oil-mannol-ATF-SP-III": {
+          name: "mannol ATF SP-III",
+          price: "545 ج.م",
+          img: "Gallery/Oils/mannol ATF SP-III 545.jpeg",
+          desc: "زيت mannol ATF SP-III بجودة عالية وأداء استثنائي لحماية محرك سيارتك.",
+        },
+        "sp-control-arm-elantra-md-cerato-k3": {
+          name: "النترا MD - سيراتو K3",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جلب مقص/النترا MD - سيراتو K3.png",
+          desc: "جلب مقص عالي الجودة مناسب لهيونداي النترا MD وسيراتو K3، يوفر أداءً ثابتاً وتحكماً ممتازاً في التوجيه.",
+        },
+        "sp-control-arm-elantra-hd-2007-lower": {
+          name: "هيونداي النترا HD 2007 - Lower Control Arm",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جلب مقص/هيونداي النترا  HD 2007 - Lower Control Arm.png",
+          desc: "جلب مقص سفلي عالي الجودة لهيونداي النترا HD 2007، مصنوع من مواد متينة وموثوقة لضمان الأمان والتحكم.",
+        },
+        "sp-control-arm-elantra-hd-lower": {
+          name: "هيونداي النترا HD - Lower Control Arm",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جلب مقص/هيونداي النترا HD - Lower Control Arm.png",
+          desc: "جلب مقص سفلي لهيونداي النترا HD، مصمم بدقة عالية لتوفير أداء مستقر وقيادة آمنة.",
+        },
+        "sp-control-arm-elantra-hd-2007-control": {
+          name: "هيونداي النترا HD 2007 - Control Arm",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/جلب مقص/هيونداي النترا HD 2007 - Control Arm.png",
+          desc: "جلب مقص شامل لهيونداي النترا HD 2007، يدمج الجودة العالية مع الأداء الموثوق لضمان تجربة قيادة آمنة.",
+        },
+        "sp-front-wheel-bearing-elantra-2008": {
+          name: "بلى عجل امامى - النترا 2008",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/بلى عجل امامى/النترا 2008.png",
+          desc: "بلى عجل امامى عالي الجودة متوافق مع هيونداي النترا 2008، يوفر ثباتاً وتحكماً أفضل خلال القيادة.",
+        },
+        "sp-front-wheel-bearing-elantra-hd-cerato": {
+          name: "بلى عجل امامى - النترا HD / سيراتو",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/بلى عجل امامى/النترا HD  - سيراتو.png",
+          desc: "بلى عجل امامى مناسب لهيونداي النترا HD وسيراتو، مصنوع بدقة لتحسين الاستقرار والتحكم.",
+        },
+        "sp-front-wheel-bearing-lanos-dabo": {
+          name: "بلى عجل امامى - دابو لانوس",
+          price: "تواصل لمعرفة السعر",
+          img: "Gallery/Spare Parts/بلى عجل امامى/دابو لانوس.png",
+          desc: "بلى عجل امامى متوافق مع لانوس، يوفر أداءً متيناً ومتانة في ظروف القيادة المختلفة.",
+        },
+        "sp-front-wheel-bearing-verna": {
+          name: "بلى عجل امامى - فيرنا",
+          price: "300 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/فيرنا.png",
+          desc: "بلى عجل امامى لهيونداي فيرنا، يضمن استجابة موثوقة وثباتاً أثناء الفرملة.",
+        },
+        "sp-front-wheel-bearing-lancer-puma-1600": {
+          name: "بلى عجل امامى - لانسر بوما 1600",
+          price: "380 ج.م",
+          img: "./Gallery/Spare%20Parts/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%89/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%8A%20%D9%84%D8%A7%D9%86%D8%B3%D8%B1%20%D8%A8%D9%88%D9%85%D8%A7%201600%20380.png",
+          desc: "بلى عجل امامى متوافق مع لانسر بوما 1600، يوفر أداءً متيناً ومتانة في ظروف القيادة المختلفة.",
+        },
+        "sp-front-wheel-bearing-6304": {
+          name: "بليه 6304",
+          price: "75 ج.م",
+          img: "./Gallery/Spare%20Parts/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%89/%D8%A8%D9%84%D9%8A%D9%87%206304%2075.png",
+          desc: "بليه 6304 عالية الجودة، توفر أداءً ثابتاً وعمراً افتراضياً طويلاً.",
+        },
+        "sp-front-wheel-bearing-shaheen-125": {
+          name: "بليه عجل امامي - شاهين",
+          price: "125 ج.م",
+          img: "./Gallery/Spare%20Parts/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%89/%D8%A8%D9%84%D9%8A%D9%87%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%8A%20%20%D8%B4%D8%A7%D9%87%D9%8A%D9%86%20125.png",
+          desc: "بليه عجل امامي لسيارة شاهين، مصنوعة بدقة لتحسين الاستقرار والتحكم.",
+        },
+        "sp-front-wheel-bearing-picanto": {
+          name: "بليه عجل امامي - بيكانتو",
+          price: "280 ج.م",
+          img: "./Gallery/Spare%20Parts/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%89/%D8%A8%D9%84%D9%8A%D9%87%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%8A%20%D8%A8%D9%8A%D9%83%D8%A7%D9%86%D8%AA%D9%88%20280.png",
+          desc: "بليه عجل امامي مناسبة لكيا بيكانتو، توفر أداءً ثابتاً ومحافظة على السلامة.",
+        },
+        "sp-front-wheel-bearing-tiggo": {
+          name: "بليه عجل امامي - تيجو",
+          price: "400 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي تيجو 400.png",
+          desc: "بليه عجل امامي لسيارة شيري تيجو، تجمع بين الجودة والمتانة لتحسين تجربة القيادة.",
+        },
+        "sp-front-wheel-bearing-toyota-avanza": {
+          name: "بليه عجل امامي - تيوتا افانزا",
+          price: "250 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي تيوتا افانزا 250.png",
+          desc: "بليه عجل امامي مناسبة لتويوتا افانزا، توفر ثباتاً وتحكماً أفضل خلال القيادة.",
+        },
+        "sp-front-wheel-bearing-renault-logan": {
+          name: "بليه عجل امامي - رينو لوجان",
+          price: "300 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي رينو لوجان 300.png",
+          desc: "بليه عجل امامي متوافق مع رينو لوجان، مصنوعة من مواد عالية الجودة لأداء يدوم.",
+        },
+        "sp-front-wheel-bearing-renault-megane-2": {
+          name: "بليه عجل امامي - رينو ميجان 2",
+          price: "450 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي رينو ميجان 2 450.png",
+          desc: "بليه عجل امامي مخصصة لرينو ميجان 2، توفر ثباتاً واستجابة ممتازة في الفرملة.",
+        },
+        "sp-front-wheel-bearing-skoda-felicia": {
+          name: "بليه عجل امامي - سكودا فليشيا",
+          price: "150 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي سكودا فليشيا 150.png",
+          desc: "بليه عجل امامي مناسبة لسكودا فليشيا، تجمع بين الأداء الموثوق والمتانة.",
+        },
+        "sp-front-wheel-bearing-suzuki-alto": {
+          name: "بليه عجل امامي - سوزوكي التو",
+          price: "160 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي سوزوكي التو 160.png",
+          desc: "بليه عجل امامي مناسبة لسوزوكي التو، مصممة لتوفير ثبات مثالي أثناء القيادة.",
+        },
+        "sp-front-wheel-bearing-suzuki-van": {
+          name: "بليه عجل امامي - سوزوكي فان",
+          price: "300 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي سوزوكي فان 300.png",
+          desc: "بليه عجل امامي مناسبة لسوزوكي فان، توفر أداءً متيناً في ظروف التشغيل المختلفة.",
+        },
+        "sp-front-wheel-bearing-chevrolet-optra": {
+          name: "بليه عجل امامي - شيفورليه اوبترا",
+          price: "325 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي شيفورليه اوبترا 325.png",
+          desc: "بليه عجل امامي مناسبة لشيفورليه اوبترا، توفر ثباتاً وتحكماً أكبر في الطريق.",
+        },
+        "sp-front-wheel-bearing-fiat-lada": {
+          name: "بليه عجل امامي - فيات / لادا",
+          price: "125 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي فيات - لادا 125.png",
+          desc: "بليه عجل امامي مناسبة لموديلات فيات ولادا، توفر أداءً ثابتاً وعمراً طويلاً.",
+        },
+        "sp-front-wheel-bearing-fiat": {
+          name: "بليه عجل امامي - فيات",
+          price: "250 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي فيات 250.png",
+          desc: "بليه عجل امامي مناسبة لموديلات فيات، تجمع بين الجودة العالية والأداء الموثوق.",
+        },
+        "sp-front-wheel-bearing-cristalla-97": {
+          name: "بليه عجل امامي - كريستاله 97",
+          price: "325 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي كريستاله 97 325.png",
+          desc: "بليه عجل امامي مناسبة لكريستاله 97، توفر استجابة موثوقة في الفرملة.",
+        },
+        "sp-front-wheel-bearing-corolla-2008-byd": {
+          name: "بليه عجل امامي - كورولا 2008 / BYD",
+          price: "370 ج.م",
+          img: "./Gallery/Spare%20Parts/%D8%A8%D9%84%D9%89%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%89/%D8%A8%D9%84%D9%8A%D9%87%20%D8%B9%D8%AC%D9%84%20%D8%A7%D9%85%D8%A7%D9%85%D9%8A%20%D9%83%D9%88%D8%B1%D9%88%D9%84%D8%A7%20%32%30%30%38%20%2d%20%42%59%44%20%33%37%30%2e%70%6e%67",
+          desc: "بليه عجل امامي مناسبة لكورولا 2008 وBYD، مصممة بدقة لتحسين الاستقرار.",
+        },
+        "sp-front-wheel-bearing-corolla-93": {
+          name: "بليه عجل امامي - كورولا 93",
+          price: "350 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي كورولا 93 350.png",
+          desc: "بليه عجل امامي مناسبة لكورولا 93، توفر متانة وأداءً عالياً.",
+        },
+        "sp-front-wheel-bearing-kia-sephia": {
+          name: "بليه عجل امامي - كيا سيفيا",
+          price: "350 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي كيا سيفيا 350.png",
+          desc: "بليه عجل امامي مناسبة لكيا سيفيا، توفر ثباتاً ممتازاً وتحكماً دقيقاً.",
+        },
+        "sp-front-wheel-bearing-kia-carens-2010": {
+          name: "بليه عجل امامي - كيا كارينز 2010",
+          price: "375 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي كيا كارينز 2010 375.png",
+          desc: "بليه عجل امامي مخصصة لكيا كارينز 2010، توفر أداءً متيناً وتجربة قيادة آمنة.",
+        },
+        "sp-front-wheel-bearing-mazda-3": {
+          name: "بليه عجل امامي - مازدا 3",
+          price: "420 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي مازدا 3 420.png",
+          desc: "بليه عجل امامي مناسبة لمازدا 3، مصنوعة بأعلى معايير الجودة والأداء.",
+        },
+        "sp-front-wheel-bearing-mitsubishi-lancershark": {
+          name: "بليه عجل امامي - ميتسوبيشي لانسر قرش",
+          price: "525 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي ميتسوبيشي لانسر قرش 525.png",
+          desc: "بليه عجل امامي مخصصة لميتسوبيشي لانسر قرش، توفر ثباتاً استثنائياً وأداءً فائقاً.",
+        },
+        "sp-front-wheel-bearing-nubira": {
+          name: "بليه عجل امامي - نوبيرا",
+          price: "325 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي نوبيرا 325.png",
+          desc: "بليه عجل امامي مناسبة لشيفورليه نوبيرا، توفر أداءً ثابتاً وموثوقاً.",
+        },
+        "sp-front-wheel-bearing-nissan-sunny-n16": {
+          name: "بليه عجل امامي - نيسان صني N16",
+          price: "395 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي نيسان صني N16 395.png",
+          desc: "بليه عجل امامي مناسبة لنيسان صني N16، مصممة لتحسين التحكم والاستقرار.",
+        },
+        "sp-front-wheel-bearing-nissan-sunny-n17": {
+          name: "بليه عجل امامي - نيسان صني N17",
+          price: "395 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي نيسان صني N17 395.png",
+          desc: "بليه عجل امامي مناسبة لنيسان صني N17، توفر استجابة سريعة في الفرملة.",
+        },
+        "sp-front-wheel-bearing-hyundai-matrix": {
+          name: "بليه عجل امامي - هيونداي ماتريكس",
+          price: "300 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/بليه عجل امامي هيونداي ماتريكس 300.png",
+          desc: "بليه عجل امامي مناسبة لهيونداي ماتريكس، تجمع بين المتانة والأداء العالي.",
+        },
+        "sp-front-wheel-bearing-cerato": {
+          name: "بليه عجل امامي - سيراتو",
+          price: "375 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل امامى/يليه عجل امامي سيراتو 375.png",
+          desc: "بليه عجل امامي مناسبة لكياسيراتو، توفر ثباتاً ممتازاً وتجربة قيادة آمنة.",
+        },
+        "sp-rear-wheel-bearing-corolla": {
+          name: "بلى عجل خلفى - تويوتا كورولا",
+          price: "135 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بلى عجل خلفي كورولا 135.png",
+          desc: "بلى عجل خلفى عالي الجودة متوافق مع تويوتا كورولا، يوفر أداءً ثابتاً ومحافظة على السلامة أثناء الفرملة.",
+        },
+        "sp-rear-wheel-bearing-hyundai-excel-lancer-92": {
+          name: "بلى عجل خلفى - هيونداي اكسيل - لانسر 92",
+          price: "150 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بلى عجل هيونداي اكسل - لانسر 92 150.png",
+          desc: "بلى عجل خلفى مخصص لسيارة هيونداي اكسيل - لانسر 92، مصمم لتوفير متانة وتحكم ممتاز خلال القيادة.",
+        },
+        "sp-rear-wheel-aveo": {
+          name: "بلى عجل خلفى - شيفورليه افيو",
+          price: "310 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بليه عجل خلفي افيو 310.png",
+          desc: "بلى عجل خلفى مناسب لموديلات افيو، يوفر أداءً ثابتاً وتحكماً أكبر في الطريق.",
+        },
+        "sp-rear-wheel-opel": {
+          name: "بلى عجل خلفى - اوبل كورسا",
+          price: "290 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بليه عجل خلفي اوبل كورسا 290.png",
+          desc: "بلى عجل خلفى مناسب لموديلات اوبل كورسا، يوفر أداءً ثابتاً وتحكماً أكبر في الطريق.",
+        },
+        "sp-rear-wheel-renault-2": {
+          name: "بلى عجل خلفى - رينو 2",
+          price: "290 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بليه عجل خلفي رينو ميجان 2 290.png",
+          desc: "بلى عجل خلفى مناسب لموديلات رينو، يوفر أداءً ثابتاً وتحكماً أكبر في الطريق.",
+        },
+        "sp-rear-wheel-lano": {
+          name: "بلى عجل خلفى - لانوس",
+          price: "275 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/طقم بلى عجل خلفي دايو لانوس 275.png",
+          desc: "بلى عجل خلفى مناسب لموديلات لانوس، يوفر أداءً ثابتاً وتحكماً أكبر في الطريق.",
+        },
+        "sp-rear-wheel-renault-new-logan": {
+          name: "بلى عجل خلفى - رينو نيو لوجان",
+          price: "330 ج.م",
+          img: "Gallery/Spare Parts/بلى عجل خلفى/بليه عجل خلفي رينو نيو لوجان 330.png",
+          desc: "بلى عجل خلفى مناسب لموديلات رينو، يوفر أداءً ثابتاً وتحكماً أكبر في الطريق.",
+        },
+
+        "sp-oil-seal-1": {
+          name: "استك رشاش لانوس",
+          price: "85 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/استك رشاش لانوس 85.png",
+          desc: "استك رشاش لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-2": {
+          name: "اويب سيل عجل خلفي لانوس",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويب سيل عجل خلفي لانوس 60.png",
+          desc: "اويب سيل عجل خلفي لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-3": {
+          name: "اويل سيل امامي فيرنا",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل امامي فيرنا 60.png",
+          desc: "اويل سيل امامي فيرنا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-4": {
+          name: "اويل سيل تقسيمه فيرنا",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه فيرنا 40.png",
+          desc: "اويل سيل تقسيمه فيرنا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-5": {
+          name: "اويل سيل تقسيمه كورولا",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه كورولا 40.png",
+          desc: "اويل سيل تقسيمه كورولا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-6": {
+          name: "اويل سيل تقسيمه لانسر",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه لانسر 40.png",
+          desc: "اويل سيل تقسيمه لانسر بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-7": {
+          name: "اويل سيل تقسيمه لانوس",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل تقسيمه لانوس 40.png",
+          desc: "اويل سيل تقسيمه لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-8": {
+          name: "اويل سيل عجل خلفي لانوس",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عجل خلفي لانوس 60.png",
+          desc: "اويل سيل عجل خلفي لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-9": {
+          name: "اويل سيل عمود كرانك خلفي شاهين",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل عمود كرانك خلفي شاهين 50.png",
+          desc: "اويل سيل عمود كرانك خلفي شاهين بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-10": {
+          name: "اويل سيل غطاء تاكيهات لانسر",
+          price: "35 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل غطاء تاكيتاك لانسر 35.png",
+          desc: "اويل سيل غطاء تاكيهات لانسر بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-11": {
+          name: "اويل سيل غطاء تاكيهات هيونداي فيرنا",
+          price: "35 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل غطاء تاكيهات هيونداي فيرنا 35.png",
+          desc: "اويل سيل غطاء تاكيهات هيونداي فيرنا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-12": {
+          name: "اويل سيل كامة لانوس",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كامة لانوس 50.png",
+          desc: "اويل سيل كامة لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-13": {
+          name: "اويل سيل كامة نوبيرا اوبترا",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كامة نوبيرا اوبترا 50.png",
+          desc: "اويل سيل كامة نوبيرا اوبترا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-14": {
+          name: "اويل سيل كامى لانوس",
+          price: "50 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كامى لانوس 50.png",
+          desc: "اويل سيل كامى لانوس بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-15": {
+          name: "اويل سيل كوبلن - تويوتا 2008",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كوبلن - تويوتا 2008 60.png",
+          desc: "اويل سيل كوبلن - تويوتا 2008 بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-16": {
+          name: "اويل سيل كوبلن سوزوكي ماروتى",
+          price: "60 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كوبلن سوزوكي ماروتى 60.png",
+          desc: "اويل سيل كوبلن سوزوكي ماروتى بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-17": {
+          name: "اويل سيل كوبلن صاج مانيوال هيونداي فيرنا",
+          price: "90 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل كولبن صاج مانيوال هيونداي فيرنا 90.png",
+          desc: "اويل سيل كوبلن صاج مانيوال هيونداي فيرنا بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+        "sp-oil-seal-18": {
+          name: "اويل سيل هيونداي اكسل",
+          price: "40 ج.م",
+          img: "Gallery/Spare Parts/اويل سيل  - استك/اويل سيل هيونداي اكسل 40.png",
+          desc: "اويل سيل هيونداي اكسل بجودة عالية وتصميم أنيق يضيف لمسة مميزة لسيارتك.",
+        },
+      };
+
+      // 2. الحصول على معرف المنتج من الرابط (URL Parameters)
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+      const product = productsData[productId];
+
+      // 3. التحقق من وجود المنتج وتحديث الصفحة
+      if (product) {
+        // تحديث عناصر واجهة المستخدم
+        document.getElementById("dynamic-title").innerText =
+          `${product.name} | ISO-GM`;
+        document.getElementById("product-name").innerText = product.name;
+        document.getElementById("product-price").innerText = product.price;
+        document.getElementById("product-description").innerText = product.desc;
+        document.getElementById("main-product-img").src = product.img;
+
+        // تحديث وسوم الـ Meta للمشاركة (المعاينة في الواتساب)
+        if (document.getElementById("og-title")) {
+          document
+            .getElementById("og-title")
+            .setAttribute("content", product.name);
+          document
+            .getElementById("og-desc")
+            .setAttribute("content", product.desc);
+          document
+            .getElementById("og-image")
+            .setAttribute("content", product.img);
+        }
+
+        // 4. بناء رسالة الواتساب الاحترافية وتشفيرها بشكل صحيح
+        const currentUrl = window.location.href; // الحصول على رابط الصفحة الحالية
+
+        // نص الرسالة مع استخدام النجوم (*) لجعل الخط عريض في واتساب
+        const rawMessage = `السلام عليكم، أرغب في الاستفسار عن المنتج التالي:
+
+📦 المنتج: ${product.name}
+💰 السعر: ${product.price}
+🔗 رابط التفاصيل: ${currentUrl}`;
+
+        // تشفير الرسالة بالكامل لتحويل المسافات والسطور الجديدة لترميز يفهمه المتصفح
+        const encodedMessage = encodeURIComponent(rawMessage);
+
+        // ربط الرسالة المشفّرة بالزر
+        document.getElementById("whatsapp-link").href =
+          `https://wa.me/201065246803?text=${encodedMessage}`;
+      } else {
+        // في حال كان الـ ID خطأ أو غير موجود
+        const container = document.querySelector(".glass-detail-card");
+        if (container) {
+          container.innerHTML = `
+                <div style="text-align:center; padding:50px; width:100%;">
+                    <h1 style="color:#333;">عذراً، المنتج غير موجود</h1>
+                    <p style="margin:20px 0;">ربما تم حذف المنتج أو الرابط غير صحيح.</p>
+                    <a href="../products.html" style="color:var(--primary-cl); font-weight:bold; text-decoration:none;">العودة للمنتجات</a>
+                </div>
+            `;
+        }
+      }
+    </script>
+    <aside class="side-nav-compact">
+      <ul class="side-nav-list">
+        <li>
+          <a href="../products.html">
+            <i class="fas fa-boxes"></i>
+            <span class="nav-text">الكل</span>
+          </a>
+        </li>
+        <li>
+          <a href="Car Accessories.html">
+            <i class="fas fa-car"></i>
+            <span class="nav-text">كماليات</span>
+          </a>
+        </li>
+        <li class="has-submenu">
+          <a href="Spare Parts.html">
+            <i class="fas fa-cogs"></i>
+            <span class="nav-text">قطع غيار</span>
+            <i class="fas fa-chevron-left submenu-chevron"></i>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-header">أقسام قطع الغيار</li>
+            <li><a href="Spare Parts.html#wheel-cylinders">مساتر عجل</a></li>
+            <li>
+              <a href="Spare Parts.html#clutch-master-upper"
+                >ماستر دبرياج علوي</a
+              >
+            </li>
+            <li><a href="Spare Parts.html#clutch-kit">طقم دبرياج</a></li>
+            <li>
+              <a href="Spare Parts.html#power-steering-hose">خرطوم باور</a>
+            </li>
+            <li><a href="Spare Parts.html#wheel-hose">خرطوم عجل</a></li>
+            <li><a href="Spare Parts.html#oil-seal">اويل سيل - استك</a></li>
+            <li><a href="Spare Parts.html#clutch-bearing">بلى دبرياج</a></li>
+            <li>
+              <a href="Spare Parts.html#timing-tensioner-bearing"
+                >بلى شداد كاتينة</a
+              >
+            </li>
+            <li>
+              <a href="Spare Parts.html#front-wheel-bearing">بلى عجل امامى</a>
+            </li>
+            <li>
+              <a href="Spare Parts.html#rear-wheel-bearing">بلى عجل خلفى</a>
+            </li>
+            <li><a href="Spare Parts.html#control-arm-bushings">جلب مقص</a></li>
+            <li>
+              <a href="Spare Parts.html#valve-cover-gasket"
+                >جوانات غطاء تاكيهات</a
+              >
+            </li>
+            <li><a href="Spare Parts.html#cabin-filters">فلاتر تكييف</a></li>
+            <li><a href="Spare Parts.html#air-filters">فلاتر هواء</a></li>
+            <li><a href="Spare Parts.html#water-outlet">كوعة مياه</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="Oils.html">
+            <i class="fas fa-oil-can"></i>
+            <span class="nav-text">زيوت</span>
+          </a>
+        </li>
+        <li>
+          <a href="Accessories.html">
+            <i class="fas fa-gem"></i>
+            <span class="nav-text">إكسسوارات</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </body>
+</html>
